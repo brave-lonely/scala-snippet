@@ -20,7 +20,7 @@ object Dependencies {
 object BuildSettings {
 
   val buildOrganization = ""
-  val appName = "scala-samples"
+  val appName = "scala-snippet"
   val buildVersion = "0.0.5"
   val buildScalaVersion = "2.11.8"
   val buildScalaOptions = Seq("-unchecked", "-deprecation", "-feature", "-encoding", "utf8")
