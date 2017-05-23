@@ -30,9 +30,14 @@ object FunctionTest extends App {
 
   println(addMult(3))
 
-  // 柯里化：  指的是将原来接收2个参数的函数变成新的接收一个参数的函数的过,新的函数返回一个以第二个参数做为入参的函数
-  def add5: Int => Int => Int = x => y => x + y
 
-  def add6(x: Int) = (y: Int) => x * y
+  // 柯里化：指的是将原来接收2个参数的函数变成新的接收一个参数的函数的过,新的函数返回一个以第二个参数做为入参的函数
+  //通俗点讲：就是把接收多个参数的函数，变成多个Function1类型函数的嵌套
+
+  val add7: Int => Int => Int = x => y => x + y
+
+  //这种写法可能更好理解
+  val add8: Int => (Int => Int) = x => (y => x + y)
+
 
 }
