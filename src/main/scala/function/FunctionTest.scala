@@ -23,13 +23,16 @@ object FunctionTest extends App {
   accept2(1)((x: Int) => x + 1)
   accept2(1)(_ + 1)
 
-
   //函数组合
-  def compose[A, B, C](f1: A => B)(f2: B => C): A => C = { x => f2(f1(x)) }
+  def compose[A, B, C](f1: A => B)(f2: B => C): A => C = x => f2(f1(x))
 
   val addMult = compose((x: Int) => x + 1)((x: Int) => x * 2)
 
   println(addMult(3))
 
+  // 柯里化：  指的是将原来接收2个参数的函数变成新的接收一个参数的函数的过,新的函数返回一个以第二个参数做为入参的函数
+  def add5: Int => Int => Int = x => y => x + y
+
+  def add6(x: Int) = (y: Int) => x * y
 
 }

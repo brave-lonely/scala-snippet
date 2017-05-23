@@ -14,11 +14,9 @@ object Chef extends App {
 
   def cutIt(f: Fruit => FruitPiece): FruitPiece = f(apple)
 
-  //  cutIt(cutApple)
-  val add: Int => Int = a => a + 1
-  def add2: Int => Int = {a => a + 1}
-  println(add2==add2)
-  println(add2 eq add2)
+    cutIt(cutFruit)
+//    cutIt(cutApple)
+
 }
 
 
